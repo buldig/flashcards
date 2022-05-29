@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e8e2e2;
+}
+
+.header {
+  display: flex;
+  padding: 15px 50px 15px 50px;
+  background-color: rgb(243, 235, 235);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.add,
+.delete {
+  padding: 5px;
+  border: 2px solid #1e347d;
+  background: #0d2236;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 1.5s;
+}
+
+.add:hover,
+.delete:hover {
+  background: #420a3c;
+  color: rgb(154, 148, 148);
+  opacity: 0.8;
+}
+
+.create-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.create-card_flex {
+  padding: 20px;
+  box-shadow: 1px 2px 3px 2px #2e2e2e;
+}
+
+input {
+  width: 300px;
+  margin-bottom: 5px;
+  border: 1px solid rgb(181, 174, 174);
+  border-radius: 5px;
+}
+
+.create-card__buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save,
+.close {
+  background: #fff;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: 0.5s linear;
+}
+
+.save:hover,
+.close:hover {
+  background: #000;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+/* ================================ */
+
+.cards-storage {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-left: 100px;
+  cursor: pointer;
+  width: 350px;
+  height: 200px;
+  position: relative;
+}
+
+.card__front,
+.card__back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.5s linear;
+}
+
+.card__front {
+  transform: perspective(600px) rotateY(0deg);
+  background-color: #d0d0d0;
+}
+
+.card__back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #d0d0d0;
+
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.card__front_content {
+  padding: 10px;
+}
+.card__answer_content {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.wrapper-arrow {
+  position: relative;
+  background: #1e0707;
+  width: 100%;
+  padding: 10px;
+}
+
+.arrow {
+  font-size: 14px;
+  border: none;
+  position: absolute;
+  background: transparent;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.2s linear;
+}
+
+.arrow:hover {
+  top: 2px;
+}
+
+.arrow-down {
+  border: solid rgb(237, 218, 218);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}

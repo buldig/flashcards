@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Flashcards</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Flashcards</h1>
+        <div class="buttons">
+          <button class="add">Add card</button>
+          <button class="delete">Del cards</button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="create-card">
+          <div class="create-card_flex">
+            <h2 class="create-card__title">Create Flashcard</h2>
+            <div class="question">
+              <p><label class="question-label" for="quest">Question</label></p>
+              <input type="text" class="question-input" id="quest" />
+            </div>
+            <div class="answer">
+              <p><label class="answer-label" for="answ">Answer</label></p>
+              <input type="text" class="answer-input" id="answ" />
+            </div>
+            <div class="create-card__buttons">
+              <button class="save">Save</button>
+              <button class="close">Close</button>
+            </div>
+          </div>
+        </section>
+        <section class="cards-storage">
+          <!-- <div class="card">
+            <div class="card__front">
+              <p class="wrapper-arrow">
+                <button class="arrow"><i class="arrow-down"></i></button>
+              </p>
+              <h2 class="card__front_content">question</h2>
+            </div>
+            <div class="card__back">
+              <div class="card__answer">
+                <p class="wrapper-arrow">
+                  <button class="arrow"><i class="arrow-down"></i></button>
+                </p>
+                <p class="card__answer_content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Soluta, suscipit similique explicabo voluptatum dolorem ad
+                  velit, sed eos, voluptatibus hic voluptas molestiae iure
+                  ducimus nemo dolore temporibus qui nulla nobis.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
