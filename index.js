@@ -1,3 +1,4 @@
+// создание переменных
 const addButton = document.querySelector(".add");
 const createCard = document.querySelector(".create-card_flex");
 const saveButton = document.querySelector(".save");
@@ -7,23 +8,27 @@ const question = document.querySelector(".question-input");
 const closeAllButtons = document.querySelector(".close");
 const answer = document.querySelector(".answer-input");
 const deleteButton = document.querySelector(".delete");
-
 let id = 0;
-addButton.addEventListener("click", showCard);
+
+// добавление обработчиков
+
+addButton.addEventListener("click", showAddCard);
 saveButton.addEventListener("click", saveCard);
-closeAllButtons.addEventListener("click", closeAllCards);
+closeAllButtons.addEventListener("click", closeAddCard);
 deleteButton.addEventListener("click", deleteCards);
 
 cardsStorage.addEventListener("click", (e) => {
   setFlipCard(e.target);
 });
 
-function showCard() {
+// функции, реализующие обработчики
+
+function showAddCard() {
   if (createCard.style.display === "none") createCard.style.display = "block";
   else createCard.style.display = "none";
 }
 
-function closeAllCards() {
+function closeAddCard() {
   createCard.style.display = "none";
 }
 
@@ -62,11 +67,13 @@ function saveCard() {
 
 function setFlipCard(element) {
   const frontCards = document.querySelectorAll(".card__front");
-  const backCards = document.querySelectorAll(".card__back");
 
-  if (element.className !== "arrow") {
+  if (
+    element.classList.contains("card__front") ||
+    element.classList.contains("card__back")
+  ) {
     flipCard(element, frontCards);
-  } else if (element.className === "arrow") {
+  } else if (element.classList.contains("arrow")) {
     closeCard(element);
   }
 }
